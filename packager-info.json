@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 8956,
+  "expoServerNgrokUrl": "https://nn-zgq.anonymous.fpmobdev.exp.direct",
+  "packagerNgrokUrl": "https://packager.nn-zgq.anonymous.fpmobdev.exp.direct",
+  "ngrokPid": 8888,
+  "webpackServerPort": null
+}
