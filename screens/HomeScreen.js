@@ -20,36 +20,33 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {id:2,  title: "Bahan Mobil",    color:"#87CEEB", image:"https://www.pngrepo.com/png/105359/170/car.png"},
-        {id:3,  title: "about",     color:"#4682B4", image:"https://cdn3.iconfinder.com/data/icons/media-icons-23/100/info2-512.png"} ,
-        {id:4,  title: "log out",   color:"#6A5ACD", image:"https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png"} ,
+        {id:2,  title: "Bahan Mobil", screen: "Mobil",   color:"#87CEEB", image:"https://www.pngrepo.com/png/105359/170/car.png"},
+        {id:3,  title: "about", screen: "", color:"#4682B4", image:"https://cdn3.iconfinder.com/data/icons/media-icons-23/100/info2-512.png"} ,
+        {id:4,  title: "log out", screen: "Login", color:"#6A5ACD", image:"https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png"} ,
       ]
     };
   }
 
-  clickEventListener(item) {
+  clickEventListener(screenName) {
     // Alert.alert(Mobil)
-    // onPress={() => navObj.navigate(screenName)}
+    this.props.navigation.navigate(screenName)
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <FlatList style={styles.list}
-          contentContainerStyle={styles.listContainer}
-          data={this.state.data}
-          horizontal={false}
-          keyExtractor= {(item) => {
-            return item.id;
-          }}
-          renderItem={({item}) => {
-            return (
-              <TouchableOpacity style={[styles.card, {backgroundColor:item.color}]} onPress={() => {this.clickEventListener(item)}}>
-                <Image style={styles.cardImage} source={{uri:item.image}}/>
-                <Text style={styles.title}>{item.title}</Text>
-              </TouchableOpacity>
-            )
-          }}/>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[0].color}]} onPress={() => {this.clickEventListener(this.state.data[0].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[0].image}}/>
+            <Text style={styles.title}>{this.state.data[0].title}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[1].color}]} onPress={() => {this.clickEventListener(this.state.data[1].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[1].image}}/>
+            <Text style={styles.title}>{this.state.data[1].title}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, {backgroundColor:this.state.data[2].color}]} onPress={() => {this.clickEventListener(this.state.data[2].screen)}}>
+            <Image style={styles.cardImage} source={{uri:this.state.data[2].image}}/>
+            <Text style={styles.title}>{this.state.data[2].title}</Text>
+        </TouchableOpacity>
       </View>
     );
   }
