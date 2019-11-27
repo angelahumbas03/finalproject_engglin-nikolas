@@ -20,9 +20,9 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {id:2,  title: "Aksesoris Mobil", screen: "Mobil",   color:"#87CEEB", image:"https://www.pngrepo.com/png/178/170/car-compact.png"},
-        {id:3,  title: "Aksesoris Motor", screen: "Motor", color:"#4682B4", image:"https://cdn3.iconfinder.com/data/icons/media-icons-23/100/info2-512.png"} ,
-        {id:4,  title: "Log Out", screen: "Login", color:"#6A5ACD", image:"https://www.pngkey.com/png/detail/208-2083760_close-comments-log-out-icon-vector-png.png"} ,
+        {id:2,  title: "Aksesoris Mobil", screen: "Mobil", color:"#4287F5", image:"https://www.pngrepo.com/png/178/170/car-compact.png"},
+        {id:3,  title: "Aksesoris Motor", screen: "Motor", color:"#4BCF3C", image:"https://www.pngrepo.com/png/113750/170/motorbike.png"} ,
+        {id:4,  title: "Log Out", screen: "Login", color:"#E8FF3D", image: "https://www.pngrepo.com/png/55650/170/logout.png"} ,
       ]
     };
   }

@@ -16,12 +16,12 @@ class Login extends React.Component {
 
     handleLogin(e) {
         if (this.state.username !== 'test') {
-            this.setState({ message: "Username salah!" });
+            this.setState({ message: "Wrong Email!" });
             return ;
         }
 
         if (this.state.password !== '1234') {
-            this.setState({ message: "Password salah!" });
+            this.setState({ message: "Wrong Password!" });
             return ;
         }
 
@@ -40,8 +40,8 @@ class Login extends React.Component {
         return (
             <View style={{ flex: 1, paddingHorizontal: 30, justifyContent: "center"}}>
                 <Image 
-                    style={{width: "50%", height: "20%", alignSelf: "center" }}
-                    source={require('../assets/user.jpg')}
+                    style={{width: "51%", height: "22%", alignSelf: "center" }}
+                    source={require('../assets/user.png')}
                 />
                 <Text style={{ paddingVertical: 20, alignSelf: "center" }}>{this.state.message}</Text>
                 <Text>Username</Text>
