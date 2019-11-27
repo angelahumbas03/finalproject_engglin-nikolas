@@ -7,6 +7,9 @@ import ImageScreen from './screens/ImageScreen';
 import CounterScreen from './screens/CounterScreen';
 import MobilScreen from './screens/MobilScreen';
 import LoginScreen from './screens/LoginScreen';
+import CobaScreen from './screens/CobaScreen';
+import MotorScreen from './screens/MotorScreen';
+
 
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
@@ -18,6 +21,8 @@ const navigator = createStackNavigator({
   Counter: CounterScreen,
   Mobil: MobilScreen,
   Login: LoginScreen,
+  Coba: CobaScreen,
+  Motor: MotorScreen,
 },{
   initialRouteName: 'Login',
   defaultNavigationOptions: {

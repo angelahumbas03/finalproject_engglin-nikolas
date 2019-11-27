@@ -20,15 +20,15 @@ export default class Menu extends Component {
     super(props);
     this.state = {
       data: [
-        {id:2,  title: "Bahan Mobil", screen: "Mobil",   color:"#87CEEB", image:"https://www.pngrepo.com/png/105359/170/car.png"},
-        {id:3,  title: "about", screen: "", color:"#4682B4", image:"https://cdn3.iconfinder.com/data/icons/media-icons-23/100/info2-512.png"} ,
-        {id:4,  title: "log out", screen: "Login", color:"#6A5ACD", image:"https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png"} ,
+        {id:2,  title: "Aksesoris Mobil", screen: "Mobil",   color:"#87CEEB", image:"https://www.pngrepo.com/png/178/170/car-compact.png"},
+        {id:3,  title: "Aksesoris Motor", screen: "Motor", color:"#4682B4", image:"https://cdn3.iconfinder.com/data/icons/media-icons-23/100/info2-512.png"} ,
+        {id:4,  title: "Log Out", screen: "Login", color:"#6A5ACD", image:"https://www.pngkey.com/png/detail/208-2083760_close-comments-log-out-icon-vector-png.png"} ,
       ]
     };
   }
 
   clickEventListener(screenName) {
-    // Alert.alert(Mobil)
+
     this.props.navigation.navigate(screenName)
   }
 
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   list: {
     //paddingHorizontal: 5,
-    backgroundColor:"#E6E6E6",
+    backgroundColor:"#346EC9",
   },
 
   /******** card **************/
@@ -93,50 +93,3 @@ const styles = StyleSheet.create({
     width: 20, 
   }
 }); 
-// import { View, Text, Button, ImageBackground } from 'react-native';
-// import ImageDetail from '../components/ImageDetail';
-// import ImageDetail1 from '../components/ImageDetail';
-
-// const HomeScreen = ({ navigation }) => {
-    
-//     return (
-//         <View>
-//             <ImageDetail 
-//                 title="Test"
-//                 imageSource={require('../assets/mobil.jpg')}
-//                 rating="5"
-//                 navObj={navigation}
-//                 screenName="Mobil"
-//             />
-//             <ImageDetail 
-//                 title="Test"
-//                 imageSource={require('../assets/Motor.jpg')}
-//                 rating="5"
-//                 navObj={navigation}
-//                 screenName="Motor"
-        //     />
-        //     {/* <Button 
-        //         title="Go to Component Screen"
-        //         onPress={()=> navigation.navigate('Component')}
-        //     />
-        //     <Button 
-        //         title="Go to Student Screen"
-        //         onPress={()=> navigation.navigate('Student')}
-        //     />
-        //     <Button 
-        //         title="Go to Image Screen"
-        //         onPress={()=> navigation.navigate('Image')}
-        //     />
-        //     <Button 
-        //         title="Go to Counter Screen"
-        //         onPress={()=> navigation.navigate('Counter')}
-        //     /> */}
-
-            
-
-        // </View>
-        
-//     );
-// };
-
-// export default HomeScreen;
